@@ -1,0 +1,12 @@
+<div style="margin-left: 150px;">
+  <div style="margin-left: 0; height: 4px; width: 100px; background-image: linear-gradient(to right, #BA501C, #F0BE29)"></div>
+  <h2 style="color: white; margin-left: 0px; letter-spacing: 5px; font-weight: normal">TOP FILMS</h2>
+  <mat-grid-list cols="4" rowHeight="450px" style="width: 75vw;">
+    <mat-grid-tile class="tile" [rowspan]="1" [colspan]="1"  *ngFor="let movie of movies">
+      <div [ngStyle]="selected == null ? regular : selected == movie ? bright : dark" >
+        <a [routerLink]="['/movies/', movie.id]"><img class="image" (mouseover)="setEffect(movie)" (mouseout)="clearEffect()" src={{movie.background}} style="max-height: 320px" alt="image"></a>
+        <p>{{movie.title | uppercase}} </p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

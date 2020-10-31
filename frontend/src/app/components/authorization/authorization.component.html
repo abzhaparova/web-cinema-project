@@ -1,0 +1,7 @@
+<form style="display: flex; flex-direction: column" #loginForm = "ngForm" (ngSubmit)="enter()">
+  <p>Log In to Your Account</p>
+  <input [(ngModel)]="username" type="text" name="username" id="username" class="input-field" placeholder="Username">
+  <input [(ngModel)]="password" type="password" name="password" id="password" class="input-field" placeholder="Password">
+  <p *ngIf="message" style="margin-top: 10px; color: red;">{{message}}</p>
+  <button class="btn btn-success">ENTER</button>
+</form>

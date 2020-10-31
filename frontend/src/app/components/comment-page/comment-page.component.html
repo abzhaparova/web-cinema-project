@@ -1,0 +1,28 @@
+
+<div *ngIf="comments">
+  <div style="display: flex; flex-direction: row; margin-top: 40px; margin-left: 20px;">
+    <span class="material-icons" style="margin-right: 5px">comment</span>
+    <h3>COMMENTS: {{comments.length}}</h3>
+    <div class="clickable" (click)="showForm()" style="margin-top: 5px; margin-left: 700px"><h4>WRITE COMMENT</h4></div>
+  </div>
+  <div *ngIf="showCommentForm" style="margin-left: 60px; margin-bottom: 20px">
+    <form #writeCommentForm = "ngForm" style="display: flex; flex-direction: column;" (ngSubmit)="writeComment()">
+      <input [(ngModel)]="message" name="message" id="message" style="width: 900px; height: 100px; margin-bottom: 10px">
+      <button class="btn btn-success" style="width: 50px">Send</button>
+    </form>
+  </div>
+  <div style="display: flex; flex-direction: row;margin-left: 50px;" *ngFor="let comment of comments">
+    <div style="display: flex; flex-direction: row">
+      <div style="display: flex; flex-direction: column" class="clickable" [routerLink]="['/profile/', comment.username]">
+        <img src="assets/default.png">
+        <p style="text-align: center">{{comment.username}}</p>
+      </div>
+      <p style="width: 900px; height: 100px">{{comment.message}}</p>
+    </div>
+    <p style="color: white; margin-top: -4px; margin-right: 4px;margin-left: -40px"
+       *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="deleteComment(comment.id)">Delete</p>
+    <img class="clickable" src="assets/upvote.png" style="height: 12px; width: 12px; margin-right: 2px" (click)="changeVote(comment.id, 1)">
+    <p style="margin-top: -2px">{{comment.score}}</p>
+    <img class="clickable" src="assets/downvote.png" style="height: 12px; width: 12px; margin-left: 2px" (click)="changeVote(comment.id, -1)">
+  </div>
+</div>

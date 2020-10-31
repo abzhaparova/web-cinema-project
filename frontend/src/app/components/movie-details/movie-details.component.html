@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="short-details">
+    <img src="{{movie.poster}}" alt="movie poster" class="movie-poster">
+    <img src="{{movie.background}}" alt="movie icon" class="movie-icon">
+    <div class="movie-info">
+      <p style="color: #DFDFDF; height: 10px">Release Date</p>
+      <p style="color: #7C7C7C; height: 10px">{{movie.release_date}}</p>
+      <p style="color: #DFDFDF; height: 10px">Director</p>
+      <p style="color: #7C7C7C; height: 10px">{{movie.director}}</p>
+      <p style="color: #DFDFDF; height: 10px">Cast</p>
+      <p style="color: #7C7C7C; height: 10px">{{movie.cast}}</p>
+      <p></p>
+    </div>
+  </div>
+  <div style="margin-top: 65px">
+    <p style="letter-spacing: 5px; color: white; font-size: 32px">{{movie.title | uppercase}}</p>
+    <p class="synopsis">{{movie.synopsis}}</p>
+  </div>
+</div>
+<app-comment-page *ngIf="PAGE_ID" [PAGE_ID]="PAGE_ID"></app-comment-page>
+

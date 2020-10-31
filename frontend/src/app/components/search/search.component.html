@@ -1,0 +1,13 @@
+<form #searchForm = "ngForm" style="margin-left: 150px; margin-top: 20px; display: flex; flex-direction: column" (ngSubmit)="search()">
+  <div>
+    <label for="search">Phrase: </label>
+    <input [(ngModel)]="searchTerm" name="search" id="search">
+  </div>
+  <button class="btn btn-success">Search</button>
+</form>
+<div *ngIf="showResults" style="margin-left: 150px; margin-bottom: 20px; margin-top: 20px">
+  <div *ngFor="let result of movies" style="display:flex; flex-direction: row">
+    <a [routerLink]="['/movies/', result.id]" ><img src="{{result.background}}"></a>
+    <p>{{result.title}}</p>
+  </div>
+</div>

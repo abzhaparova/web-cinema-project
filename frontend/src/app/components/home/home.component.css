@@ -1,0 +1,23 @@
+
+
+:host {
+  background: black;
+  width: 100%;
+}
+
+.image, div {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+}
+
+.image:hover {
+  transform:scale(1.05, 1.05);
+}
+
+p {
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+

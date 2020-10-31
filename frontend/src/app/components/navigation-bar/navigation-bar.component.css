@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+div * {
+  padding: 5px;
+  margin-left: auto;
+}
+
+.logo {
+  max-height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: gray;
+  font-size: large;
+}
+
+p:hover {
+  color: rgba(249,163,45, 1);
+  cursor: pointer;
+}
+
+button {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+span {
+  color: rgba(255, 255, 255, 1);
+}
+
+a:hover, a:hover span {
+  color: rgba(249,163,45, 1);
+}
+
+span, p {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+}
+
+

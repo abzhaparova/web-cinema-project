@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+  background-color: black;
+  flex-direction: column;
+}
+
+h3, h4 {
+  letter-spacing: 5px;
+  color: white;
+
+}
+
+span {
+  color: rgba(255, 255, 255, 1);
+}
+
+p {
+  color: white;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}

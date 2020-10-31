@@ -1,0 +1,34 @@
+:host {
+  background-color: black;
+  width: 100%;
+  min-height: 600px;
+}
+
+label {
+  color: white;
+}
+
+input {
+  margin-left: 20px;
+  width: 400px;
+  height: 30px;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: 180px;
+  width: 80px;
+  height: 20px;
+}
+
+p {
+  color: white;
+  margin-left: 10px;
+  height: 100px;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
